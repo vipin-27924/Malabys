@@ -15,8 +15,8 @@
             font-family: 'Montserrat', sans-serif;
             color: #2C2C2C;
             overflow-x: hidden;
+            background: #F8F4E9;
         }
-
         .brand-font {
             font-family: 'Playfair Display', serif;
         }
@@ -125,6 +125,21 @@
             padding: 5px 10px;
             border-radius: 4px;
             font-weight: bold;
+            z-index: 10;
+        }
+        
+        .out-of-stock-image {
+            filter: grayscale(20%) ;
+            transition: filter 0.3s ease;
+        }
+        
+        .description-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 2.5rem; /* Set a min-height to reserve space for two lines */
         }
 
         /* Form styling */
@@ -153,8 +168,8 @@
                 <a href="index.html" class="brand-font text-2xl font-bold text-charcoal">MALABYS</a>
             </div>
             <div class="hidden md:flex space-x-10">
-                <a href="#new-arrivals" class="nav-link text-charcoal hover:text-gold transition">New Arrivals</a>
-                <a href="#collections" class="nav-link text-charcoal hover:text-gold transition">Collections</a>
+                <a href="#new-arrivals" class="nav-link text-charcoal hover:text-gold transition">Men Collection</a>
+                <a href="#women" class="nav-link text-charcoal hover:text-gold transition">Women Collection</a>
                 <a href="#about" class="nav-link text-charcoal hover:text-gold transition">About</a>
                 <a href="#contact" class="nav-link text-charcoal hover:text-gold transition">Contact</a>
             </div>
@@ -184,8 +199,9 @@
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#new-arrivals" class="block py-2 px-4 text-sm text-charcoal hover:bg-gold/10">New Arrivals</a>
-            <a href="#collections" class="block py-2 px-4 text-sm text-charcoal hover:bg-gold/10">Collections</a>
+            <a href="#new-arrivals" class="block py-2 px-4 text-sm text-charcoal hover:bg-gold/10">Men Collection</a>
+            <a href="#women" class="block py-2 px-4 text-sm text-charcoal hover:bg-gold/10">Women Collection</a>
+            
             <a href="#about" class="block py-2 px-4 text-sm text-charcoal hover:bg-gold/10">About</a>
             <a href="#contact" class="block py-2 px-4 text-sm text-charcoal hover:bg-gold/10">Contact</a>
         </div>
@@ -270,11 +286,53 @@
             <div class="container mx-auto px-4">
                 <div class="content-area rounded-3xl p-8 md:p-12 shadow-lg">
                     <div class="text-center mb-16">
-                        <h2 class="brand-font text-4xl font-bold mb-4">New <span class="gold-underline">Arrivals</span>
+                        <h2 class="brand-font text-4xl font-bold mb-4">Men's <span class="gold-underline">Collections</span>
                         </h2>
                         <p class="text-xl text-charcoal/80 max-w-2xl mx-auto">Discover the latest drop from Malabys</p>
                     </div>
                     <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                </div>
+            </div>
+        </section>
+        <section id="women" class="py-20 relative">
+                <div class="container mx-auto px-4">
+                <div class="content-area rounded-3xl p-8 md:p-12 shadow-lg">
+                <div class="text-center mb-16">
+                    <h2 class="brand-font text-4xl font-bold mb-4">Women <span class="gold-underline">Collection</span></h2>
+                    <p class="text-xl text-charcoal/80 max-w-2xl mx-auto">Explore our exclusive women’s collection</p>
+                </div>
+      <div id="women-product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </div>
+  </div>
+</section>
+
+        <section id="about" class="py-20 relative">
+            <div class="container mx-auto px-4">
+                <div class="content-area rounded-3xl p-8 md:p-12 shadow-lg">
+                    <div class="text-center mb-16">
+                        <h2 class="brand-font text-4xl font-bold mb-4">About <span class="gold-underline">Malabys</span></h2>
+                        <p class="text-xl text-charcoal/80 max-w-2xl mx-auto">Our story and our commitment to style and sustainability.</p>
+                    </div>
+                    <div class="text-lg text-charcoal/90 leading-relaxed max-w-4xl mx-auto">
+                        <p class="mb-6">At Malabys, style meets purpose. We bring you globally loved fashion, trusted for quality and design, while making sure every choice you make with us creates a positive impact.</p>
+                        <p class="mb-6">Here’s the reality: over 92 million tonnes of clothing waste end up in landfills every year, poisoning our environment and fueling climate change. We believe fashion shouldn’t cost the earth. That’s why we curate the best brands, premium thrifted pieces, and surplus clothing—delivered at prices your wallet will love.</p>
+                        <p class="mb-6">The thrift fashion market in India is booming, already valued at USD 3.5 billion in 2024 and projected to grow at a 13.2% CAGR through 2033. What’s driving this? Rising youth demand, growing awareness of sustainable choices, social media influence, and the power of e-commerce. Thrift is no longer a niche—it’s the new mainstream.</p>
+                        <p class="mb-6">When you choose Malabys, you’re not just buying clothes. You’re joining a movement to extend the life of garments, save water and energy, and cut down pollution. Every thrifted find is a small step towards a cleaner, greener planet—while keeping your style game strong.</p>
+                        <h3 class="brand-font text-3xl font-bold mt-12 mb-4">Our Philosophy</h3>
+                        <ul class="list-disc list-inside space-y-2 text-charcoal/90">
+                            <li>We believe in sustainable fashion that respects both style and the planet.</li>
+                            <li>Our team has a deep passion for fashion, driven by creativity and individuality.</li>
+                            <li>We offer world-class fashion articles at prices that fit every budget.</li>
+                            <li>Building trust with our customers is the foundation of everything we do.</li>
+                        </ul>
+                        <h2 class="brand-font text-3xl font-bold mt-12 mb-4">Services</h3>
+                             <ul class="list-disc list-inside space-y-2 text-charcoal/90">
+                                <li>Cash on Delivery at Galgotias University and Supertech</li>
+                                <li>Free delivery in Greater Noida</li>
+                                <li>Easy return for damaged products</li>
+                                <li>No return for size issue as all the sizes are given under products</li>
+                             </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -302,7 +360,7 @@
                                 <textarea id="contact-message" rows="5" class="form-input" required></textarea>
                             </div>
                             <button type="submit"
-                                class="w-full px-8 py-3 bg-[#D4AF37] hover:bg-[#B8860B] text-white rounded-full transition">Send
+                                class="w-full px-8 py-3 bg-[#D4AF37] hover:bg-[#B8860B] text-white rounded-full font-medium transition">Send
                                 Message via WhatsApp</button>
                         </form>
                     </div>
@@ -366,31 +424,554 @@
                     </svg>
                 </button>
             </div>
-            <div id="cart-modal-body" class="p-4 sm:p-6 flex-1 overflow-y-auto">
+            <div class="flex-1 overflow-y-auto p-6">
+                <div id="modal-cart-items" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            </div>
+            <div class="p-6 border-t border-gray-200 shrink-0">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-xl font-bold">Total:</span>
+                    <span id="modal-cart-total" class="text-xl font-bold">₹0</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button id="checkout-btn" class="flex-1 bg-green-600 hover:bg-green-700 text-white rounded-full py-3 font-medium transition">
+                        Proceed to Checkout
+                    </button>
+                    <button id="close-modal-footer-btn" class="flex-1 border border-gray-300 hover:bg-gray-100 rounded-full py-3 font-medium transition">
+                        Continue Shopping
+                    </button>
+                </div>
             </div>
         </div>
     </div>
+    
+    <div id="pincode-modal"
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[80] hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="brand-font text-2xl font-bold">Pincode Check</h2>
+                <button id="close-pincode-modal" class="p-2 text-gray-400 hover:text-gray-800 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <p class="text-gray-600 mb-4">Enter your 6-digit pincode to check for delivery availability.</p>
+            <input type="number" id="pincode-input" class="form-input" placeholder="e.g., 201306">
+            <p id="pincode-error" class="text-red-500 text-sm mb-4 hidden">Service is not available in this area.</p>
+            <button id="pincode-check-btn" class="w-full bg-[#D4AF37] hover:bg-[#B8860B] text-white py-3 rounded-full font-medium transition">
+                Check Pincode
+            </button>
+        </div>
+    </div>
 
+    <div id="details-modal"
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[80] hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="brand-font text-2xl font-bold">Enter Your Details</h2>
+                <button id="close-details-modal" class="p-2 text-gray-400 hover:text-gray-800 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <p class="text-gray-600 mb-4">Please provide your details to complete the order.</p>
+            <form id="order-details-form">
+                <div class="mb-4">
+                    <label for="details-name" class="form-label">Full Name</label>
+                    <input type="text" id="details-name" class="form-input" required>
+                </div>
+                <div class="mb-4">
+                    <label for="details-phone" class="form-label">Phone Number (with country code)</label>
+                    <input type="tel" id="details-phone" class="form-input" placeholder="+91..." required>
+                </div>
+                <div class="mb-4">
+                    <label for="details-address" class="form-label">Address</label>
+                    <textarea id="details-address" rows="3" class="form-input" required></textarea>
+                </div>
+                <button type="submit" class="w-full px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium transition">
+                    Confirm Order via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+    
     <script>
         // --- EMBEDDED JAVASCRIPT ---
+        document.addEventListener('DOMContentLoaded', () => {
 
-        // --- Part 1: Three.js Background with Clothing Elements ---
-        if (typeof THREE !== 'undefined') {
+            // Simulated product data
+            const products = [
+                // Men's Collection
+                { id: 'CM0001', name: 'The Denim Combo', price: 999, description: "Jacket : Length - 23in,Chest -34,Shoulder-19,Sleeve-24 in]Jeans:[Length - 42 in, Waist - 30 in ]", image: 'urban(1).png', inStock: true, gender: 'men' },{ id: 'M20001', name: "Men Straight Fit Jeans   Brand: \'Fila\'", price: 599, description: 'Length - 42 in, Waist - 30', image: 'straightfit.jpg', inStock: true, gender: 'men' },
+                { id: 'M10006', name: 'Men Embroided Shirt', price: 349, description: 'Length - 29 in, Chest - 44 , Shoulder - 20 , Sleeve 26 in ', image: 'embshirt.jpg', inStock: true, gender: 'men' },
+                { id: 'M20002', name: 'Men Damaged Jeans', price: 599, description: 'Length - 45 in, Waist - 34.', image: 'BaggyFitJeans5.png', inStock: true, gender: 'men' },
+                { id: 'M10005', name: 'Men Printed Shirt     Brand : \'Emperio\'', price: 349, description: 'Size : Length - 26 in ,Chest - 42 in , Shoulder - 18 in , Sleeves- 26 in.', image: 'PrintedShirt (2).png', inStock: false, gender: 'men' },
+                { id: 'M20009', name: 'Men Regular Fit Jeans   Brand : Levis\'\s', price: 349, description: 'Size : Length-44 in, Waist-32 in', image: 'levi.png', inStock: true, gender: 'men' },{ id: 'M20009', name: 'Men Joggers              Brand : Dickies', price: 349, description: 'Size : Length-44 in, Waist-32 in', image: 'dickies.png', inStock: true, gender: 'men' },
+                { id: 'M20008', name: 'Men Baggy Fit Jeans', price: 549, description: 'Length - 44 in, Waist - 34', image: 'BaggyFitJeans7.png', inStock: false, gender: 'men' },
+                { id: 'M20007', name: 'Men Baggy Fit Jeans ', price: 549, description: 'Length - 40 in, Waist - 34', image: 'BaggyFitJeans4.png', inStock: true, gender: 'men' },{ id: 'M10007', name: 'Men Checked Shirt    Brand:\'Paul & Shark\'', price: 349, description: 'Length - 30 in, Chest - 44 , Shoulder - 29 , Sleeve 25 in ', image: 'chcshirt.jpg', inStock: true, gender: 'men' },
+                { id: 'M20003', name: 'Men Straight Jeans', price: 549, description: 'Length - 42 in, Waist - 32', image: 'astraight.jpg', inStock: true, gender: 'men' },
+                { id: 'M10003', name: 'Men Checked Shirt', price: 349, description: 'Length - 29 in ,Chest - 40 in , Shoulder - 18 in , Sleeves- 27 in', image: '3.png', inStock: true, gender: 'men' },
+                { id: 'M10008', name: 'Men Patterned Shirt', price: 349, description: 'Length - 26 in ,Chest - 42 in , Shoulder - 18', image: 'PatternedShirt.png', inStock: true, gender: 'men' },
+                { id: 'M20004', name: "Men Black Jeans     Brand: \'Wrangler\'", price: 599, description: 'Length - 40 in, Waist - 30', image: 'WJean.png', inStock: true, gender: 'men' },
+                { id: 'M30001', name: 'Men Denim Jacket', price: 699, description: 'Length - 30 in, Chest - 46 in, Sleeve - 24 in , Shoulder - 19', image: 'DenimJacket.png', inStock: true, gender: 'men' },
+                { id: 'M10001', name: 'Men Classic Stripped', price: 349, description: 'Length - 29 in ,Chest - 44 in , Shoulder - 19 in , Sleeves- 26 in', image: 'one.png', inStock: false, gender: 'men' },
+                { id: 'M10002', name: 'Men Jeans Shirt', price: 349, description: 'Length - 26 in ,Chest -40 in , Shoulder - 16 in , Sleeves- 27 i', image: '2.png', inStock: false, gender: 'men' },
+                { id: 'M10004', name: 'Men Checked Shirt', price: 349, description: 'Length - 30 in ,Chest - 56 in , Shoulder - 21 in , Sleeves- 25 in.', image: '4.png', inStock: true, gender: 'men' },
+                { id: 'M20005', name: 'Men Straight Fit Jeans Brand: Tommy Hilfiger', price: 549, description: 'Length - 44 in, Waist - 38', image: 'StraightFitJeans.png', inStock: true, gender: 'men' },
+                // Women's Collection
+                { id: 'W10002', name: 'Women Black and White Strip Crop Top', price: 349, description: 'Length - 16 in, Size - S,  Sleeveless  ', image: 'zebra.png', inStock: true, gender: 'women' },
+                { id: 'CW0001', name: 'Style in Red Combo', price: 849, description: 'Top =  M Size , Cargos = L - 40 in, Waist - 28 in ', image: 'red-final.png', inStock: true, gender: 'women' }, { id: 'W20001', name: 'Women Straight fit Low Waist Jeans', price: 549, description: 'Length - 40 in ,Waist - 28', image: 'mayurijeans2.png', inStock: false, gender: 'women' },
+                { id: 'W20001', name: 'Women Relaxed Fit Cream Jeans', price: 549, description: 'Length - 40 in ,Waist - 26', image: 'RelaxedFitCreamJeans.png', inStock: true, gender: 'women' },
+                { id: 'W20002', name: 'Women Harem Fit Pants', price: 399, description: 'Length - 40 in, Waist - 28', image: 'Harem_Style_Pants.png', inStock: true, gender: 'women' },
+                { id: 'W10001', name: 'Women T-Shirt          Brand: \'Hush Puppies\'', price: 299, description: 'Length - 22 in, Shoulder - 15 in', image: 'Tshirt.png', inStock: false, gender: 'women' },
+                { id: 'W20003', name: 'Women Off White Jeans', price: 499, description: 'Length - 35 in, Waist - 28', image: 'OffWhiteJeans.png', inStock: true, gender: 'women' }
+            ];
+
+            // List of valid pincodes for delivery
+            const validPincodes = ['201306', '201308', '201310', '201301', '201303', '201304', '201305', '201309', '201312', '203207', '201006'];
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            const cartCountElement = document.getElementById('cart-count');
+            const cartSidebar = document.getElementById('cart-sidebar');
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartSubtotalElement = document.getElementById('cart-subtotal');
+            const productGridMen = document.getElementById('product-grid');
+            const productGridWomen = document.getElementById('women-product-grid');
+            const cartModal = document.getElementById('cart-modal');
+            const modalCartItemsContainer = document.getElementById('modal-cart-items');
+            const modalCartTotalElement = document.getElementById('modal-cart-total');
+            const searchInput = document.getElementById('search-input');
+            const searchResultsContainer = document.getElementById('search-results');
+            const pincodeModal = document.getElementById('pincode-modal');
+            const pincodeInput = document.getElementById('pincode-input');
+            const pincodeError = document.getElementById('pincode-error');
+            const detailsModal = document.getElementById('details-modal');
+            const orderDetailsForm = document.getElementById('order-details-form');
+
+
+            // Function to render products dynamically
+            function renderProducts(container, productList) {
+                container.innerHTML = '';
+                productList.forEach(product => {
+                    const productCard = document.createElement('div');
+                    const outOfStockClass = !product.inStock ? 'out-of-stock' : '';
+                    const imageClass = !product.inStock ? 'out-of-stock-image' : '';
+                    const isProductInCart = cart.some(item => item.id === product.id);
+                    const buttonText = isProductInCart ? 'Added to Cart' : 'Add to Cart';
+                    const buttonDisabled = !product.inStock || isProductInCart;
+
+                    const buttonHtml = `<button data-product-id="${product.id}" class="add-to-cart-btn mt-4 w-full py-3 rounded-full font-medium transition ${!product.inStock ? 'bg-gray-400 text-white cursor-not-allowed' : 'bg-[#2C2C2C] hover:bg-[#D4AF37] text-white'}" ${buttonDisabled ? 'disabled' : ''}>${!product.inStock ? 'Sold Out' : buttonText}</button>`;
+                    
+                    productCard.className = `bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between h-full transition-transform transform hover:scale-105 ${outOfStockClass}`;
+                    productCard.innerHTML = `
+                        <div class="relative">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-80 object-cover ${imageClass}">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-semibold text-lg mb-1">${product.name}</h3>
+                            <p class="text-black text-sm mb-1 description-text">${product.description}</p>
+                            <p class="font-bold text-[#D4AF37] text-xl mt-auto">₹${Number(product.price).toFixed(2)}</p>
+                            ${buttonHtml}
+                        </div>
+                    `;
+                    container.appendChild(productCard);
+                });
+            }
+
+            // Function to render search results
+            function renderSearchResults(results) {
+                searchResultsContainer.innerHTML = '';
+                if (results.length === 0) {
+                    searchResultsContainer.innerHTML = '<p class="text-center text-gray-500 py-4">No products found.</p>';
+                    return;
+                }
+                results.forEach(product => {
+                    const productCard = document.createElement('div');
+                    const outOfStockClass = !product.inStock ? 'out-of-stock' : '';
+                    const imageClass = !product.inStock ? 'out-of-stock-image' : '';
+                    const isProductInCart = cart.some(item => item.id === product.id);
+                    const buttonText = isProductInCart ? 'Added' : 'Add to Cart';
+                    const buttonDisabled = !product.inStock || isProductInCart;
+
+                    const buttonHtml = product.inStock
+                        ? `<button data-product-id="${product.id}" class="add-to-cart-btn mt-2 bg-[#D4AF37] hover:bg-[#B8860B] text-white py-2 px-4 rounded-full text-sm transition" ${buttonDisabled ? 'disabled' : ''}>${buttonText}</button>`
+                        : `<span class="mt-2 text-sm text-gray-500">Sold Out</span>`;
+                    
+                    productCard.className = `flex items-center space-x-4 border-b border-gray-100 py-3`;
+                    productCard.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" class="w-16 h-16 rounded-lg object-cover ${imageClass}">
+                        <div class="flex-1">
+                            <h4 class="font-medium">${product.name}</h4>
+                            <p class="text-sm text-gray-600">₹${Number(product.price).toFixed(2)}</p>
+                        </div>
+                        ${buttonHtml}
+                    `;
+                    searchResultsContainer.appendChild(productCard);
+                });
+            }
+
+            // Function to update the sidebar cart display
+            function updateCartSidebar() {
+                cartItemsContainer.innerHTML = '';
+                let subtotal = 0;
+                cartCountElement.textContent = cart.length;
+
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = `<p class="text-center text-gray-500 py-10">Your cart is empty.</p>`;
+                } else {
+                    cart.forEach(item => {
+                        const itemTotal = item.price * item.quantity;
+                        subtotal += itemTotal;
+                        const cartItem = document.createElement('div');
+                        cartItem.className = 'flex items-center space-x-4 py-3 border-b border-gray-100';
+                        cartItem.innerHTML = `
+                            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 rounded-lg object-cover">
+                            <div class="flex-1">
+                                <h4 class="font-medium">${item.name}</h4>
+                                <p class="text-sm text-gray-600">₹${Number(item.price).toFixed(2)}</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button data-id="${item.id}" data-action="decrease" class="text-gray-500 hover:text-gray-800">-</button>
+                                <span class="font-medium">${item.quantity}</span>
+                                <button data-id="${item.id}" data-action="increase" class="text-gray-500 hover:text-gray-800">+</button>
+                            </div>
+                            <button data-id="${item.id}" data-action="remove" class="text-red-500 hover:text-red-700 ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        `;
+                        cartItemsContainer.appendChild(cartItem);
+                    });
+                }
+                cartSubtotalElement.textContent = `₹${subtotal.toFixed(2)}`;
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+
+            // Function to update the modal cart display
+            function updateCartModal() {
+                modalCartItemsContainer.innerHTML = '';
+                let total = 0;
+                if (cart.length === 0) {
+                    modalCartItemsContainer.innerHTML = `<p class="col-span-full text-center text-gray-500 py-10">Your cart is empty.</p>`;
+                } else {
+                    cart.forEach(item => {
+                        const itemTotal = item.price * item.quantity;
+                        total += itemTotal;
+                        const cartItem = document.createElement('div');
+                        cartItem.className = 'bg-gray-50 rounded-lg p-4 shadow-sm';
+                        cartItem.innerHTML = `
+                            <div class="flex items-center space-x-4 mb-4">
+                                <img src="${item.image}" alt="${item.name}" class="w-20 h-20 rounded-lg object-cover">
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-lg">${item.name}</h4>
+                                    <p class="text-gray-600">₹${Number(item.price).toFixed(2)}</p>
+                                </div>
+                                <button data-id="${item.id}" data-action="remove" class="text-red-500 hover:text-red-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-gray-200 pt-4">
+                                <div class="flex items-center">
+                                    <button data-id="${item.id}" data-action="decrease" class="w-8 h-8 flex items-center justify-center border rounded-full text-gray-500 hover:bg-gray-200 transition">-</button>
+                                    <span class="w-12 text-center">${item.quantity}</span>
+                                    <button data-id="${item.id}" data-action="increase" class="w-8 h-8 flex items-center justify-center border rounded-full text-gray-500 hover:bg-gray-200 transition">+</button>
+                                </div>
+                                <span class="font-bold">₹${itemTotal.toFixed(2)}</span>
+                            </div>
+                        `;
+                        modalCartItemsContainer.appendChild(cartItem);
+                    });
+                }
+                modalCartTotalElement.textContent = `₹${total.toFixed(2)}`;
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+
+            // Add item to cart
+            function addToCart(productId) {
+                const product = products.find(p => p.id === productId);
+                const cartItem = cart.find(item => item.id === productId);
+                const button = document.querySelector(`.add-to-cart-btn[data-product-id="${productId}"]`);
+
+                if (cartItem) {
+                    cartItem.quantity++;
+                } else {
+                    cart.push({ ...product, quantity: 1 });
+                }
+
+                if (button) {
+                    button.disabled = true;
+                    button.textContent = 'Added to Cart';
+                    button.classList.remove('bg-[#2C2C2C]', 'hover:bg-[#D4AF37]');
+                    button.classList.add('bg-gray-400', 'cursor-not-allowed');
+                }
+                
+                updateCartSidebar();
+            }
+            
+            // Function to update the state of the add to cart buttons after cart changes.
+            function updateAddToCartButtons() {
+                const buttons = document.querySelectorAll('.add-to-cart-btn');
+                buttons.forEach(button => {
+                    const productId = button.dataset.productId;
+                    const isProductInCart = cart.some(item => item.id === productId);
+                    
+                    if (isProductInCart) {
+                        button.disabled = true;
+                        button.textContent = 'Added to Cart';
+                        button.classList.remove('bg-[#2C2C2C]', 'hover:bg-[#D4AF37]');
+                        button.classList.add('bg-gray-400', 'cursor-not-allowed');
+                    } else {
+                        const product = products.find(p => p.id === productId);
+                        if (product && product.inStock) {
+                           button.disabled = false;
+                           button.textContent = 'Add to Cart';
+                           button.classList.remove('bg-gray-400', 'cursor-not-allowed');
+                           button.classList.add('bg-[#2C2C2C]', 'hover:bg-[#D4AF37]');
+                        }
+                    }
+                });
+            }
+
+            // Handle cart item quantity and removal
+            function handleCartAction(event) {
+                const button = event.target.closest('button');
+                if (!button) return;
+
+                const { id, action } = button.dataset;
+                const itemIndex = cart.findIndex(item => item.id === id);
+
+                if (itemIndex > -1) {
+                    if (action === 'increase') {
+                        cart[itemIndex].quantity++;
+                    } else if (action === 'decrease') {
+                        if (cart[itemIndex].quantity > 1) {
+                            cart[itemIndex].quantity--;
+                        } else {
+                            cart.splice(itemIndex, 1);
+                            updateAddToCartButtons();
+                        }
+                    } else if (action === 'remove') {
+                        cart.splice(itemIndex, 1);
+                        updateAddToCartButtons();
+                    }
+                    updateCartSidebar();
+                    if (cartModal.classList.contains('active')) {
+                        updateCartModal();
+                    }
+                }
+            }
+
+            // Event Listeners
+            document.getElementById('mobile-menu-button').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+
+            document.getElementById('cart-button').addEventListener('click', () => {
+                cartSidebar.classList.add('open');
+                document.getElementById('cart-overlay').classList.remove('hidden');
+                updateCartSidebar();
+            });
+
+            document.getElementById('close-cart').addEventListener('click', () => {
+                cartSidebar.classList.remove('open');
+                document.getElementById('cart-overlay').classList.add('hidden');
+            });
+
+            document.getElementById('cart-overlay').addEventListener('click', () => {
+                cartSidebar.classList.remove('open');
+                document.getElementById('cart-overlay').classList.add('hidden');
+            });
+
+            document.getElementById('search-button').addEventListener('click', () => {
+                document.getElementById('search-modal').classList.remove('hidden');
+                searchInput.focus();
+            });
+
+            document.getElementById('close-search').addEventListener('click', () => {
+                document.getElementById('search-modal').classList.add('hidden');
+                searchInput.value = '';
+                searchResultsContainer.innerHTML = '';
+            });
+
+            // Live search functionality
+            searchInput.addEventListener('input', (event) => {
+                const query = event.target.value.toLowerCase();
+                if (query.length > 0) {
+                    const filteredProducts = products.filter(product => 
+                        product.name.toLowerCase().includes(query)
+                    );
+                    renderSearchResults(filteredProducts);
+                } else {
+                    searchResultsContainer.innerHTML = '';
+                }
+            });
+            
+            // Re-use event listener for adding from search results
+            searchResultsContainer.addEventListener('click', (event) => {
+                const button = event.target.closest('.add-to-cart-btn');
+                if (button) {
+                    const productId = button.dataset.productId;
+                    addToCart(productId);
+                }
+            });
+            
+            document.getElementById('view-cart-btn').addEventListener('click', () => {
+                cartSidebar.classList.remove('open');
+                document.getElementById('cart-overlay').classList.add('hidden');
+                cartModal.classList.remove('hidden');
+                cartModal.classList.add('active');
+                updateCartModal();
+            });
+
+            document.getElementById('close-modal-btn').addEventListener('click', () => {
+                cartModal.classList.add('hidden');
+                cartModal.classList.remove('active');
+            });
+            
+            document.getElementById('close-modal-footer-btn').addEventListener('click', () => {
+                cartModal.classList.add('hidden');
+                cartModal.classList.remove('active');
+            });
+
+            // Handle add to cart clicks on both product grids
+            productGridMen.addEventListener('click', (event) => {
+                const button = event.target.closest('.add-to-cart-btn');
+                if (button) {
+                    const productId = button.dataset.productId;
+                    addToCart(productId);
+                }
+            });
+
+            productGridWomen.addEventListener('click', (event) => {
+                const button = event.target.closest('.add-to-cart-btn');
+                if (button) {
+                    const productId = button.dataset.productId;
+                    addToCart(productId);
+                }
+            });
+
+            cartItemsContainer.addEventListener('click', handleCartAction);
+            modalCartItemsContainer.addEventListener('click', handleCartAction);
+
+            // Checkout workflow
+            document.getElementById('checkout-btn').addEventListener('click', () => {
+                if (cart.length === 0) {
+                    // This is a simple message box to handle the case of an empty cart.
+                    // A more robust solution would be a custom modal UI.
+                    const modalMsg = document.createElement('div');
+                    modalMsg.className = 'fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] flex items-center justify-center p-4';
+                    modalMsg.innerHTML = `
+                        <div class="bg-white p-6 rounded-2xl text-center">
+                            <h3 class="font-bold text-lg mb-2">Your cart is empty!</h3>
+                            <p class="text-sm text-gray-500 mb-4">Add some items before proceeding to checkout.</p>
+                            <button id="close-msg-btn" class="bg-[#D4AF37] text-white px-4 py-2 rounded-full">OK</button>
+                        </div>
+                    `;
+                    document.body.appendChild(modalMsg);
+                    document.getElementById('close-msg-btn').addEventListener('click', () => {
+                        modalMsg.remove();
+                    });
+                    return;
+                }
+                cartModal.classList.add('hidden');
+                pincodeModal.classList.remove('hidden');
+            });
+
+            document.getElementById('pincode-check-btn').addEventListener('click', () => {
+                const pincode = pincodeInput.value.trim();
+                pincodeError.classList.add('hidden');
+
+                if (pincode.length === 6 && validPincodes.includes(pincode)) {
+                    pincodeModal.classList.add('hidden');
+                    detailsModal.classList.remove('hidden');
+                } else {
+                    pincodeError.classList.remove('hidden');
+                }
+            });
+
+            document.getElementById('close-pincode-modal').addEventListener('click', () => {
+                pincodeModal.classList.add('hidden');
+                cartModal.classList.remove('hidden');
+            });
+
+            document.getElementById('close-details-modal').addEventListener('click', () => {
+                detailsModal.classList.add('hidden');
+                pincodeModal.classList.remove('hidden');
+            });
+
+            orderDetailsForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                const name = document.getElementById('details-name').value;
+                const phone = document.getElementById('details-phone').value;
+                const address = document.getElementById('details-address').value;
+                const total = modalCartTotalElement.textContent;
+
+                let orderSummary = `New Order from Malabys!\n\n`;
+                orderSummary += `*Customer Details*\n`;
+                orderSummary += `Name: ${name}\n`;
+                orderSummary += `Phone: ${phone}\n`;
+                orderSummary += `Address: ${address}\n\n`;
+                
+                orderSummary += `*Order Items*\n`;
+                cart.forEach(item => {
+                    orderSummary += `• Product ID: ${item.id}\n`;
+                    orderSummary += `  Product: ${item.name}\n`;
+                    orderSummary += `  Qty: ${item.quantity}\n\n`;
+                });
+                
+                orderSummary += `*Total: ${total}*`;
+
+                const whatsappUrl = `https://wa.me/918840141692?text=${encodeURIComponent(orderSummary)}`;
+                window.open(whatsappUrl, '_blank');
+
+                // Clear the cart and reset local storage after successful checkout
+                cart = [];
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartSidebar();
+                
+                detailsModal.classList.add('hidden');
+            });
+
+            // Contact Form
+            document.getElementById('contact-form').addEventListener('submit', (event) => {
+                event.preventDefault();
+                const name = document.getElementById('contact-name').value;
+                const email = document.getElementById('contact-email').value;
+                const message = document.getElementById('contact-message').value;
+
+                const whatsappText = encodeURIComponent(`Hello Malabys,\n\nI have a question from your website.\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+                const whatsappUrl = `https://wa.me/?text=${whatsappText}`;
+
+                window.open(whatsappUrl, '_blank');
+            });
+
+            // Initialize product rendering and cart
+            renderProducts(productGridMen, products.filter(p => p.gender === 'men'));
+            renderProducts(productGridWomen, products.filter(p => p.gender === 'women'));
+            updateCartSidebar();
+
+ if (typeof THREE !== 'undefined') {
             const scene = new THREE.Scene();
             const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
             const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setClearColor(0x000000, 0);
             const canvasContainer = document.getElementById('canvas-container');
-            if (canvasContainer) canvasContainer.appendChild(renderer.domElement);
-
+            if(canvasContainer) canvasContainer.appendChild(renderer.domElement);
+            
             const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
             scene.add(ambientLight);
-
+            
             const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
             directionalLight.position.set(1, 1, 1);
             scene.add(directionalLight);
-
+            
             // Create clothing-like 3D objects (t-shirts, pants, etc.)
             const objects = [];
             const geometryTypes = [
@@ -400,10 +981,10 @@
                 new THREE.SphereGeometry(0.5, 32, 16), // Hats/accessories
                 new THREE.TorusGeometry(0.4, 0.1, 16, 100) // Bracelets/rings
             ];
-
+            
             const colors = [0xD4AF37, 0xFFFFFF, 0x1a1a2e, 0xF1E5AC, 0xB8860B];
             const textures = [];
-
+            
             // Create fabric-like textures
             const textureLoader = new THREE.TextureLoader();
             const fabricTextures = [
@@ -413,16 +994,16 @@
                 createFabricTexture(0xF1E5AC, 'linen'),
                 createFabricTexture(0xB8860B, 'leather')
             ];
-
+            
             function createFabricTexture(baseColor, type) {
                 const canvas = document.createElement('canvas');
                 canvas.width = 256;
                 canvas.height = 256;
                 const context = canvas.getContext('2d');
-
+                
                 context.fillStyle = `#${baseColor.toString(16).padStart(6, '0')}`;
                 context.fillRect(0, 0, 256, 256);
-
+                
                 // Add fabric pattern based on type
                 context.globalAlpha = 0.1;
                 if (type === 'denim') {
@@ -441,542 +1022,74 @@
                         context.fillRect(0, i, 256, 2);
                     }
                 }
-
+                
                 const texture = new THREE.CanvasTexture(canvas);
                 return texture;
             }
-
+            
             for (let i = 0; i < 20; i++) {
                 const geometry = geometryTypes[Math.floor(Math.random() * geometryTypes.length)];
-                const material = new THREE.MeshPhongMaterial({
+                const material = new THREE.MeshPhongMaterial({ 
                     color: colors[Math.floor(Math.random() * colors.length)],
                     map: fabricTextures[Math.floor(Math.random() * fabricTextures.length)],
                     shininess: 30,
                     transparent: true,
                     opacity: 0.7
                 });
-
+                
                 const object = new THREE.Mesh(geometry, material);
                 object.position.x = (Math.random() - 0.5) * 40;
                 object.position.y = (Math.random() - 0.5) * 40;
                 object.position.z = (Math.random() - 0.5) * 40;
-
+                
                 const scale = Math.random() * 1.2 + 0.8;
                 object.scale.set(scale, scale, scale);
-
+                
                 object.rotation.x = Math.random() * Math.PI;
                 object.rotation.y = Math.random() * Math.PI;
                 object.rotation.z = Math.random() * Math.PI;
-
-                object.userData = {
+                
+                object.userData = { 
                     rotationSpeedX: (Math.random() - 0.5) * 0.005,
                     rotationSpeedY: (Math.random() - 0.5) * 0.005,
                     rotationSpeedZ: (Math.random() - 0.5) * 0.005
                 };
-
+                
                 scene.add(object);
                 objects.push(object);
             }
-
+            
             camera.position.z = 20;
-
+            
             let mouseX = 0, mouseY = 0;
             document.addEventListener('mousemove', (event) => {
                 mouseX = (event.clientX / window.innerWidth) * 2 - 1;
                 mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
             });
-
+            
             window.addEventListener('resize', () => {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.innerHeight);
             });
-
+            
             function animate() {
                 requestAnimationFrame(animate);
-
+                
                 camera.position.x += (mouseX * 5 - camera.position.x) * 0.05;
                 camera.position.y += (mouseY * 5 - camera.position.y) * 0.05;
                 camera.lookAt(scene.position);
-
+                
                 objects.forEach(object => {
                     object.rotation.x += object.userData.rotationSpeedX;
                     object.rotation.y += object.userData.rotationSpeedY;
                     object.rotation.z += object.userData.rotationSpeedZ;
                 });
-
+                
                 renderer.render(scene, camera);
             }
-
-            animate();
-        }
-
-        // --- Part 2: Main Application Logic ---
-        document.addEventListener('DOMContentLoaded', () => {
-            const products = [{ id: 'M10006', name: 'Men Embroided Shirt', price: 349, description: 'Length - 29 in, Chest - 44 , Shoulder - 20 , Sleeve 26 in ', image: 'embshirt.jpg', stock: 1 },{ id: 'M20002', name: 'Men Baggy Fit Jeans', price: 649, description: 'Length - 45 in, Waist - 34.', image: 'BaggyFitJeans5.png', stock: 1 }, { id: 'M10005', name: 'Men Printed Shirt     , Brand : \'Emperio\'', price: 349, description: 'Size : Length - 26 in ,Chest - 42 in , Shoulder - 18 in , Sleeves- 26 in.', image: 'PrintedShirt (2).png', stock: 0 }, { id: 'M10007', name: 'Men Checked Shirt', price: 349, description: 'Length - 30 in, Chest - 44 , Shoulder - 29 , Sleeve 25 in ', image: 'chcshirt.jpg', stock: 1 },  { id: 'M20003', name: 'Men Straight Jeans', price: 549, description: 'Length - 42 in, Waist - 32', image: 'astraight.jpg', stock: 1 },{ id: 'M20001', name: "Men Straight Fit Jeans", price: 599, description: 'Length - 42 in, Waist - 30', image: 'straightfit.jpg', stock: 1 },{ id: 'M20008', name: 'Men Baggy Fit Jeans', price: "549", description: 'Length - 44 in, Waist - 34', image: 'BaggyFitJeans7.png', stock: 0 },  { id: 'M20007', name: 'Men Baggy Fit Jeans', price: 549, description: 'Length - 40 in, Waist - 34', image: 'BaggyFitJeans4.png', stock: 1 },{ id: 'M10003', name: 'Men Checked Shirt', price: 349, description: 'Length - 29 in ,Chest - 40 in , Shoulder - 18 in , Sleeves- 27 in', image: '3.png', stock: 1 },{ id: 'M10008', name: 'Men Patterned Shirt', price: "349", description: 'Length - 26 in ,Chest - 42 in , Shoulder - 18', image: 'PatternedShirt.png', stock: 1 },{ id: 'M20004', name: 'Men Black Jeans', price: 599, description: 'Length - 40 in, Waist - 30', image: 'BlackJeans.png', stock: 1 },  { id: 'M30001', name: 'Men Denim Jacket', price: "649", description: 'Length - 30 in, Chest - 46 in, Sleeve - 24 in , Shoulder - 19', image: 'DenimJacket.png', stock: 1 },
-            { id: 'M10001', name: 'Men Classic Stripped', price: 349, description: 'Length - 29 in ,Chest - 44 in , Shoulder - 19 in , Sleeves- 26 in', image: 'one.png', stock: 0 },
-            { id: 'M10002', name: 'Men Jeans Shirt', price: 349, description: 'Length - 26 in ,Chest -40 in , Shoulder - 16 in , Sleeves- 27 i', image: '2.png', stock: 0 },
-            { id: 'M10004', name: 'Men Checked Shirt', price: 349, description: 'Length - 30 in ,Chest - 56 in , Shoulder - 21 in , Sleeves- 25 in.', image: '4.png', stock: 1 },
-            { id: 'M20005', name: 'Men Straight Fit Jeans', price: 549, description: 'Length - 44 in, Waist - 38', image: 'StraightFitJeans.png', stock: 1 },
             
-            { id: 'W10002', name: 'Women Balck and White Strip crop Top', price: 349, description: 'Length - 16 in, Size - S,  Sleeveless ', image: 'zebra.png', stock: 1 },{ id: 'W10002', name: 'Style in Red Combo', price: 849, description: 'Top =  M Size , Cargos = L - 40 in, Waist - 28 in ', image: 'combo-red.png', stock: 1 },
-            { id: 'W20001', name: 'Women Relaxed Fit Cream Jeans', price: 549, description: 'Eye-catching button-up shirt with bold prints.', image: 'RelaxedFitCreamJeans.png', stock: 1 },
-            { id: 'W20002', name: 'Women Harem Fit Pants', price: "399", description: 'Length - 40 in, Waist - 28', image: 'Harem_Style_Pants.png', stock: 1 },
-            { id: 'W10001', name: 'Women T-Shirt', price: "299", description: 'Length - 22 in, Shoulder - 15 in', image: 'Tshirt.png', stock: 0 },
-            { id: 'W20003', name: 'Women Off White Jeans', price: "499", description: 'Length - 35 in, Waist - 28', image: 'OffWhiteJeans.png', stock: 1 },
-            
-            ];
-
-            const productGrid = document.getElementById('product-grid');
-            if (productGrid) {
-                products.slice(0, 10000).forEach(product => {
-                    const isOutOfStock = product.stock === 0;
-                    productGrid.innerHTML += `
-                        <div class="product-card bg-white rounded-2xl overflow-hidden group ${isOutOfStock ? 'out-of-stock' : ''}">
-                            <div class="h-96 overflow-hidden relative">
-                                <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover product-image group-hover:scale-105 transition-transform duration-500 ease-in-out">
-                                ${isOutOfStock ? '<div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-sm">Sold Out</div>' : ''}
-                            </div>
-                            <div class="p-6 flex flex-col">
-                                <h3 class="text-xl font-semibold mb-2 h-14">${product.name}</h3>
-                                <p class="text-charcoal/70 mb-4 h-12 flex-grow">${product.description}</p>
-                                <div class="flex justify-between items-center mt-auto">
-                                    <span class="text-2xl font-bold text-[#D4AF37]">₹${product.price.toLocaleString('en-IN')}</span>
-                                    <button class="add-to-cart-btn px-4 py-2 bg-[#D4AF37] hover:bg-[#B8860B] text-white rounded-full transition text-sm ${isOutOfStock ? 'opacity-50 cursor-not-allowed' : ''}" 
-                                        data-id="${product.id}" ${isOutOfStock ? 'disabled' : ''}>
-                                        ${isOutOfStock ? 'Sold Out' : 'Add to Cart'}
-                                    </button>
-                                </div>
-                                ${!isOutOfStock ? `<div class="mt-2 text-sm text-gray-500">${product.stock} in stock</div>` : ''}
-                            </div>
-                        </div>`;
-                });
-            }
-
-            // --- Cart & Modal Variables ---
-            let cart = JSON.parse(localStorage.getItem('malabysCart')) || [];
-            const cartButton = document.getElementById('cart-button');
-            const cartSidebar = document.getElementById('cart-sidebar');
-            const closeCartBtn = document.getElementById('close-cart');
-            const cartOverlay = document.getElementById('cart-overlay');
-            const cartCount = document.getElementById('cart-count');
-            const cartItemsContainer = document.getElementById('cart-items');
-            const cartSubtotal = document.getElementById('cart-subtotal');
-            const viewCartBtn = document.getElementById('view-cart-btn');
-
-            const cartModal = document.getElementById('cart-modal');
-            const closeModalBtn = document.getElementById('close-modal-btn');
-            const cartModalBody = document.getElementById('cart-modal-body');
-
-            // Search functionality
-            const searchButton = document.getElementById('search-button');
-            const searchModal = document.getElementById('search-modal');
-            const searchInput = document.getElementById('search-input');
-            const searchResults = document.getElementById('search-results');
-            const closeSearch = document.getElementById('close-search');
-
-            // Contact form
-            const contactForm = document.getElementById('contact-form');
-
-            // --- Core Functions ---
-            const saveCart = () => localStorage.setItem('malabysCart', JSON.stringify(cart));
-            const getProductById = (id) => products.find(p => p.id === id);
-            const formatPrice = (price) => `₹${price.toLocaleString('en-IN')}`;
-
-            // --- Modal Controls ---
-            const openCartModal = () => {
-                renderCartModalBody();
-                cartModal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            };
-
-            const closeCartModal = () => {
-                cartModal.classList.add('hidden');
-                document.body.style.overflow = '';
-            };
-
-            const openSearchModal = () => {
-                searchModal.classList.remove('hidden');
-                searchInput.focus();
-                document.body.style.overflow = 'hidden';
-            };
-
-            const closeSearchModal = () => {
-                searchModal.classList.add('hidden');
-                document.body.style.overflow = '';
-                searchInput.value = '';
-                searchResults.innerHTML = '';
-            };
-
-            // --- Sidebar Controls ---
-            const openCartSidebar = () => {
-                cartSidebar.classList.add('open');
-                cartOverlay.classList.remove('hidden');
-            };
-
-            const closeCartSidebar = () => {
-                cartSidebar.classList.remove('open');
-                cartOverlay.classList.add('hidden');
-            };
-
-            // --- UI Rendering ---
-            const renderCartSidebar = () => {
-                if (!cartItemsContainer) return;
-                cartItemsContainer.innerHTML = '';
-
-                if (cart.length === 0) {
-                    cartItemsContainer.innerHTML = `<div class="text-center text-gray-500 py-8"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg><p>Your cart is empty</p></div>`;
-                } else {
-                    cart.forEach(item => {
-                        const product = getProductById(item.id);
-                        if (!product) return;
-
-                        cartItemsContainer.innerHTML += `
-                            <div class="flex items-center py-4 border-b border-gray-100">
-                                <img src="${product.image}" alt="${product.name}" class="w-16 h-16 object-cover rounded">
-                                <div class="ml-4 flex-1">
-                                    <h3 class="font-medium">${product.name}</h3>
-                                    <p class="text-gray-500 text-sm">${formatPrice(product.price)} x ${item.quantity}</p>
-                                </div>
-                                <div class="text-right">
-                                    <span class="font-bold">${formatPrice(product.price * item.quantity)}</span>
-                                    <button class="remove-from-cart-btn text-red-500/70 hover:text-red-500 text-xs block mt-1" data-id="${item.id}">Remove</button>
-                                </div>
-                            </div>`;
-                    });
-                }
-
-                const subtotal = cart.reduce((sum, item) => sum + (getProductById(item.id)?.price || 0) * item.quantity, 0);
-                cartSubtotal.textContent = formatPrice(subtotal);
-            };
-
-            const renderCartModalBody = () => {
-                if (!cartModalBody) return;
-
-                if (cart.length === 0) {
-                    cartModalBody.innerHTML = `
-                        <div class="text-center text-gray-500 py-16">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                            <p class="text-xl mb-4">Your cart is currently empty.</p>
-                            <button id="close-modal-and-shop" class="px-8 py-3 bg-[#D4AF37] hover:bg-[#B8860B] text-white rounded-full transition">Continue Shopping</button>
-                        </div>`;
-                } else {
-                    const subtotal = cart.reduce((sum, item) => sum + (getProductById(item.id)?.price || 0) * item.quantity, 0);
-
-                    let itemsHTML = cart.map(item => {
-                        const product = getProductById(item.id);
-                        if (!product) return '';
-
-                        return `
-                            <div class="grid grid-cols-6 gap-4 items-center py-4 border-b">
-                                <div class="col-span-3 flex items-center gap-4">
-                                    <img src="${product.image}" alt="${product.name}" class="w-20 h-20 object-cover rounded-md">
-                                    <h3 class="font-semibold">${product.name}</h3>
-                                </div>
-                                <div class="text-center hidden md:block">${formatPrice(product.price)}</div>
-                                <div class="text-center col-span-2 md:col-span-1">
-                                    <div class="flex items-center justify-center border rounded-full w-24 mx-auto">
-                                        <button class="quantity-change-btn p-2" data-id="${product.id}" data-change="-1">-</button>
-                                        <span class="px-3">${item.quantity}</span>
-                                        <button class="quantity-change-btn p-2" data-id="${product.id}" data-change="1">+</button>
-                                    </div>
-                                </div>
-                                <div class="text-right font-bold">${formatPrice(product.price * item.quantity)}</div>
-                            </div>`;
-                    }).join('');
-
-                    cartModalBody.innerHTML = `
-                        <div class="hidden md:grid grid-cols-6 gap-4 font-bold text-charcoal/60 uppercase text-xs pb-4 border-b-2">
-                            <div class="col-span-3">Product</div>
-                            <div class="text-center">Price</div>
-                            <div class="text-center">Quantity</div>
-                            <div class="text-right">Total</div>
-                        </div>
-                        ${itemsHTML}
-                        <div class="mt-8 flex flex-col items-end">
-                            <div class="w-full max-w-sm space-y-4">
-                                <div class="flex justify-between text-lg">
-                                    <span class="text-gray-600">Subtotal:</span>
-                                    <span class="font-bold">${formatPrice(subtotal)}</span>
-                                </div>
-                                <div class="flex justify-between text-lg">
-                                    <span class="text-gray-600">Shipping:</span>
-                                    <span class="font-bold">FREE</span>
-                                </div>
-                                <div class="flex justify-between text-xl font-bold border-t pt-4">
-                                    <span>Total:</span>
-                                    <span>${formatPrice(subtotal)}</span>
-                                </div>
-                                
-                                <div class="mt-6">
-                                    <label class="form-label">Enter your pincode to check availability:</label>
-                                    <input type="text" id="pincode-input" class="form-input" placeholder="e.g., 201309" maxlength="6">
-                                    <button id="check-pincode" class="w-full mt-2 px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded transition">Check Pincode</button>
-                                    <div id="pincode-result" class="mt-2 text-sm hidden"></div>
-                                </div>
-                                
-                                <div id="checkout-form" class="hidden mt-6">
-                                    <h3 class="font-bold mb-4">Shipping Information</h3>
-                                    <input type="text" id="customer-name" class="form-input" placeholder="Full Name" required>
-                                    <input type="text" id="customer-address" class="form-input" placeholder="Full Address" required>
-                                    <input type="tel" id="customer-phone" class="form-input" placeholder="Phone Number" required>
-                                    <button id="proceed-to-whatsapp" class="w-full px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full transition">
-                                        Proceed to WhatsApp Payment
-                                    </button>
-                                </div>
-                            </div>
-                        </div>`;
-                }
-            };
-
-            const updateAllUI = () => {
-                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-                cartCount.textContent = totalItems;
-                cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
-                renderCartSidebar();
-
-                if (!cartModal.classList.contains('hidden')) {
-                    renderCartModalBody();
-                }
-            };
-
-            // Search functionality
-            const performSearch = (query) => {
-                if (!query.trim()) {
-                    searchResults.innerHTML = '';
-                    return;
-                }
-
-                const results = products.filter(product =>
-                    product.name.toLowerCase().includes(query.toLowerCase()) ||
-                    product.description.toLowerCase().includes(query.toLowerCase())
-                );
-
-                searchResults.innerHTML = '';
-
-                if (results.length === 0) {
-                    searchResults.innerHTML = '<p class="p-4 text-center text-gray-500">No products found</p>';
-                } else {
-                    results.forEach(product => {
-                        const isOutOfStock = product.stock === 0;
-                        searchResults.innerHTML += `
-                            <div class="p-4 border-b border-gray-100 hover:bg-gray-50 cursor-pointer">
-                                <div class="flex items-center">
-                                    <img src="${product.image}" alt="${product.name}" class="w-16 h-16 object-cover rounded">
-                                    <div class="ml-4">
-                                        <h3 class="font-medium">${product.name}</h3>
-                                        <p class="text-gray-500 text-sm">${formatPrice(product.price)}</p>
-                                        ${isOutOfStock ? '<span class="text-xs text-red-500">Sold Out</span>' : ''}
-                                    </div>
-                                </div>
-                            </div>`;
-                    });
-                }
-            };
-
-            const sendOrderToWhatsApp = (orderDetails) => {
-                const message = encodeURIComponent(
-                    `New Order from Malabys Website:\n\n` +
-                    `Customer Name: ${orderDetails.name}\n` +
-                    `Address: ${orderDetails.address}\n` +
-                    `Phone: ${orderDetails.phone}\n\n` +
-                    `Order Details:\n${orderDetails.items}\n\n` +
-                    `Total Amount: ${orderDetails.total}`
-                );
-
-                const whatsappURL = `https://api.whatsapp.com/send/?phone=918840141692&text=${message}&type=phone_number&app_absent=0`;
-                window.open(whatsappURL, '_blank');
-            };
-
-            const sendContactMessageToWhatsApp = (contactDetails) => {
-                const message = encodeURIComponent(
-                    `New Contact Message from Malabys Website:\n\n` +
-                    `Name: ${contactDetails.name}\n` +
-                    `Email: ${contactDetails.email}\n` +
-                    `Message: ${contactDetails.message}`
-                );
-
-                const whatsappURL = `https://api.whatsapp.com/send/?phone=918840141692&text=${message}&type=phone_number&app_absent=0`;
-                window.open(whatsappURL, '_blank');
-            };
-
-            // --- Event Listeners ---
-            document.body.addEventListener('click', (e) => {
-                if (e.target.closest('.add-to-cart-btn') && !e.target.closest('.add-to-cart-btn').disabled) {
-                    const id = e.target.closest('.add-to-cart-btn').dataset.id;
-                    const product = getProductById(id);
-
-                    if (product && product.stock > 0) {
-                        const existingItem = cart.find(item => item.id === id);
-
-                        if (existingItem) {
-                            if (existingItem.quantity < product.stock) {
-                                existingItem.quantity++;
-                            } else {
-                                alert(`Only ${product.stock} items available in stock.`);
-                            }
-                        } else {
-                            cart.push({ id: id, quantity: 1 });
-                        }
-
-                        saveCart();
-                        updateAllUI();
-                        openCartSidebar();
-                    }
-                }
-
-                if (e.target.closest('.remove-from-cart-btn')) {
-                    const id = e.target.closest('.remove-from-cart-btn').dataset.id;
-                    cart = cart.filter(item => item.id !== id);
-                    saveCart();
-                    updateAllUI();
-                }
-
-                if (e.target.closest('.quantity-change-btn')) {
-                    const id = e.target.closest('.quantity-change-btn').dataset.id;
-                    const change = parseInt(e.target.closest('.quantity-change-btn').dataset.change, 10);
-                    const item = cart.find(item => item.id === id);
-                    const product = getProductById(id);
-
-                    if (item && product) {
-                        const newQuantity = item.quantity + change;
-
-                        if (newQuantity <= 0) {
-                            cart = cart.filter(cartItem => cartItem.id !== id);
-                        } else if (newQuantity > product.stock) {
-                            alert(`Only ${product.stock} items available in stock.`);
-                        } else {
-                            item.quantity = newQuantity;
-                        }
-
-                        saveCart();
-                        updateAllUI();
-                    }
-                }
-
-                if (e.target.id === 'check-pincode') {
-                    const pincodeInput = document.getElementById('pincode-input');
-                    const pincodeResult = document.getElementById('pincode-result');
-                    const checkoutForm = document.getElementById('checkout-form');
-
-                    if (pincodeInput.value.length !== 6 || isNaN(pincodeInput.value)) {
-                        pincodeResult.textContent = 'Please enter a valid 6-digit pincode';
-                        pincodeResult.className = 'mt-2 text-sm text-red-600';
-                        pincodeResult.classList.remove('hidden');
-                        return;
-                    }
-
-                    const greaterNoidaPincodes = ['201308', '201309', '201310', '201306', '201301'];
-
-                    if (greaterNoidaPincodes.includes(pincodeInput.value)) {
-                        pincodeResult.textContent = 'Delivery available in your area! Proceed with checkout.';
-                        pincodeResult.className = 'mt-2 text-sm text-green-600';
-                        pincodeResult.classList.remove('hidden');
-                        checkoutForm.classList.remove('hidden');
-                    } else {
-                        pincodeResult.textContent = 'Sorry, we currently do not deliver to your area.';
-                        pincodeResult.className = 'mt-2 text-sm text-red-600';
-                        pincodeResult.classList.remove('hidden');
-                        checkoutForm.classList.add('hidden');
-                    }
-                }
-
-                if (e.target.id === 'proceed-to-whatsapp') {
-                    const nameInput = document.getElementById('customer-name');
-                    const addressInput = document.getElementById('customer-address');
-                    const phoneInput = document.getElementById('customer-phone');
-
-                    if (!nameInput.value.trim() || !addressInput.value.trim() || !phoneInput.value.trim()) {
-                        alert('Please fill all the required fields');
-                        return;
-                    }
-
-                    let orderItems = '';
-                    let orderTotal = 0;
-
-                    cart.forEach(item => {
-                        const product = getProductById(item.id);
-                        if (product) {
-                            orderItems += `${product.name} (ID: ${product.id}, Qty: ${item.quantity}) - ₹${product.price * item.quantity}\n`;
-                            orderTotal += product.price * item.quantity;
-                        }
-                    });
-
-                    const orderDetails = {
-                        name: nameInput.value,
-                        address: addressInput.value,
-                        phone: phoneInput.value,
-                        items: orderItems,
-                        total: `₹${orderTotal.toLocaleString('en-IN')}`
-                    };
-
-                    sendOrderToWhatsApp(orderDetails);
-
-                    cart = [];
-                    saveCart();
-                    updateAllUI();
-                    closeCartModal();
-                }
-
-                if (e.target.id === 'checkout-btn-page') {
-                    if (cart.length > 0) {
-                        openCartModal();
-                    } else {
-                        alert('Your cart is empty!');
-                    }
-                }
-
-                if (e.target.id === 'close-modal-and-shop') {
-                    closeCartModal();
-                }
-            });
-
-            searchButton.addEventListener('click', openSearchModal);
-            closeSearch.addEventListener('click', closeSearchModal);
-            searchModal.addEventListener('click', (e) => {
-                if (e.target.id === 'search-modal') closeSearchModal();
-            });
-
-            searchInput.addEventListener('input', (e) => {
-                performSearch(e.target.value);
-            });
-
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                const name = document.getElementById('contact-name').value;
-                const email = document.getElementById('contact-email').value;
-                const message = document.getElementById('contact-message').value;
-
-                sendContactMessageToWhatsApp({ name, email, message });
-
-                contactForm.reset();
-                alert('Your message has been sent! You will be redirected to WhatsApp.');
-            });
-
-            cartButton.addEventListener('click', openCartSidebar);
-            closeCartBtn.addEventListener('click', closeCartSidebar);
-            cartOverlay.addEventListener('click', closeCartSidebar);
-
-            viewCartBtn.addEventListener('click', () => {
-                closeCartSidebar();
-                openCartModal();
-            });
-
-            closeModalBtn.addEventListener('click', closeCartModal);
-            cartModal.addEventListener('click', (e) => {
-                if (e.target.id === 'cart-modal') closeCartModal();
-            });
-
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenuButton) {
-                mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-            }
-
-            updateAllUI();
+            animate();}
         });
     </script>
 </body>

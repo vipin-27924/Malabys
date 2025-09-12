@@ -1,0 +1,4 @@
+[   INFO][           ]: == Creating the logfile ==
+[  ERROR][    CMDLINE]: The required argument --project hasn't been received / initialized correctly.
+[  ERROR][    CMDLINE]: Fatal error has occurred when analyzing the received command line.
+[   INFO][           ]: == Closing the logfile ==

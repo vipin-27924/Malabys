@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "Malabys",
+			"path": "../../12sept/Malabys"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "posters"
+	}
+}
